@@ -87,3 +87,9 @@ git rebase master
 git rebase -i HEAD~3 #~后面的数字表示HEAD前的第几个commit状态
 ```
 这条命令会进入一个交互界面，修改执行。一般的，第一条保持p，后面的修改为s。
+
+### 9. 将develop分支merge进master
+```bash
+git checkout master
+git merge develop
+```
