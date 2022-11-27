@@ -77,3 +77,13 @@ git fetch #抓取远程仓库有，但是本地仓库没有的工作。不会更
 git pull #pull=fetch+merge，会将远端的工作和提交与本地merge，如有冲突需要手动解决
 git pull --rebase #pull --rebase=fetch+rebase，如有冲突需要手动解决
 ```
+
+### 8. 将master分支rebase到develop
+```bash
+git rebase master
+```
+如果master分支和本地有多个commit冲突，则需要rebase多次，会留下多个rebase commit记录。可以选择对这些重复的rebase commit进行合并
+```bash
+git rebase -i HEAD~3 #~后面的数字表示HEAD前的第几个commit状态
+```
+这条命令会进入一个交互界面，修改执行。一般的，第一条保持p，后面的修改为s。
