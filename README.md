@@ -34,3 +34,10 @@ git reset --soft HEAD^  #--soft表示只重置头部; HEAD^表示HEAD前的一�
 ```bash
 git reset --hard HEAD^  #--hard表示硬撤销，会丢失untracked files
 ```
+
+### 6.创建开发分支并切换
+```bash
+git branch develop #在当前所在的提交对象上创建一个指针develop，此时HEAD还在当前分支
+git checkout develop #将HEAD移到develop分支
+git commit -a -m 'feat:develop分支提交测试'
+```
