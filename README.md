@@ -34,3 +34,13 @@ git reset --soft HEAD^  #--soft表示只重置头部; HEAD^表示HEAD前的一�
 ```bash
 git reset --hard HEAD^  #--hard表示硬撤销，会丢失untracked files
 ```
+
+### 6. 合并两个分支
+再创建一个工作分支
+```bash
+git checkout -b develop2 #checkout -b = branch + checkout
+```
+一部分的工作在develop2中完成，并提交
+```bash
+git commit -a -m "feat:develop2分支上的提交"
+```
