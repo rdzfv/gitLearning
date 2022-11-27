@@ -35,6 +35,7 @@ git reset --soft HEAD^  #--soft表示只重置头部; HEAD^表示HEAD前的一�
 git reset --hard HEAD^  #--hard表示硬撤销，会丢失untracked files
 ```
 
+<<<<<<< HEAD
 ### 6.创建开发分支并切换
 ```bash
 git branch develop #在当前所在的提交对象上创建一个指针develop，此时HEAD还在当前分支
@@ -42,8 +43,26 @@ git checkout develop #将HEAD移到develop分支
 git commit -a -m 'feat:develop分支提交测试'
 ```
 
+### 6. 合并两个分支
+再创建一个工作分支
+```bash
+git checkout -b develop2 #checkout -b = branch + checkout
+```
+一部分的工作在develop2中完成，并提交
+```bash
+git commit -a -m "feat:develop2分支上的提交"
+```
 一部分的工作在develop中完成，并提交
 ```bash
 git checkout develop
 git commit -a -m "feat:develop分支上的提交"
+```
+在develop分支上合并两分支的提交
+```bash
+git merge develop2
+```
+此时会提示存在冲突，需要手动解决。即将auto-merge后的文件进行整理，最后删除===和<<<等一系列自动生成的分隔符
+手动解决冲突后，再执行commit提交
+```bash
+git commit -a -m "feat:合并develop分支和develop2分支，并解决冲突"
 ```
