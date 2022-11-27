@@ -93,3 +93,8 @@ git rebase -i HEAD~3 #~后面的数字表示HEAD前的第几个commit状态
 git checkout master
 git merge develop
 ```
+
+### 10. 将所有本地分支push到远端
+```bash
+git push --all
+```
