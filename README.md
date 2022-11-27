@@ -18,3 +18,4 @@ git branch -M master  #重命名本地当前分支 git branch (-m | -M) [<oldbra
 ```bash
 git push -u origin master  #将本地commit提交到远端仓库的master分支，-u为指定上游
 ```
+### 3. 编写.gitignore
