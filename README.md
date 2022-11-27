@@ -41,3 +41,9 @@ git branch develop #在当前所在的提交对象上创建一个指针develop�
 git checkout develop #将HEAD移到develop分支
 git commit -a -m 'feat:develop分支提交测试'
 ```
+
+一部分的工作在develop中完成，并提交
+```bash
+git checkout develop
+git commit -a -m "feat:develop分支上的提交"
+```
