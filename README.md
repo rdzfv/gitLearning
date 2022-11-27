@@ -42,7 +42,7 @@ git checkout develop #将HEAD移到develop分支
 git commit -a -m 'feat:develop分支提交测试'
 ```
 
-### 6. 合并两个分支
+### 7. 合并两个分支
 再创建一个工作分支
 ```bash
 git checkout -b develop2 #checkout -b = branch + checkout
@@ -66,7 +66,7 @@ git commit -a -m "feat:合并develop分支和develop2分支，并解决冲突"
 git branch -d develop2 #如果develop2还存在未合并的工作，并且确认丢弃，使用-D
 ```
 
-### 7. 与远程分支同步提交
+### 8. 与远程分支同步提交
 首先将本地的分支的提交push到远端
 ```bash
 git push --all #--all表示push全部分支，如远端不存在的分支则会自动新建同名分支
@@ -78,7 +78,7 @@ git pull #pull=fetch+merge，会将远端的工作和提交与本地merge，如�
 git pull --rebase #pull --rebase=fetch+rebase，如有冲突需要手动解决
 ```
 
-### 8. 将master分支rebase到develop
+### 9. 将master分支rebase到develop
 ```bash
 git rebase master
 ```
@@ -88,13 +88,14 @@ git rebase -i HEAD~3 #~后面的数字表示HEAD前的第几个commit状态
 ```
 这条命令会进入一个交互界面，修改执行。一般的，第一条保持p，后面的修改为s。
 
-### 9. 将develop分支merge进master
+### 10. 将develop分支merge进master
 ```bash
 git checkout master
 git merge develop
 ```
 
-### 10. 将所有本地分支push到远端
+### 11. 将所有本地分支push到远端
 ```bash
 git push --all
 ```
+如果有分支存在冲突，需要先对冲突的分支进行pull（fetch+merge）,然后再进行push
