@@ -66,3 +66,7 @@ git merge develop2
 ```bash
 git commit -a -m "feat:合并develop分支和develop2分支，并解决冲突"
 ```
+删除develop2分支
+```bash
+git branch -d develop2 #如果develop2还存在未合并的工作，并且确认丢弃，使用-D
+```
